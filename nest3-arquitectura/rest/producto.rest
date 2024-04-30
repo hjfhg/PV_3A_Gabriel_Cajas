@@ -1,0 +1,35 @@
+### Listar productos
+GET http://127.0.0.1:3000/producto
+
+###guardar 
+
+POST http://127.0.0.1:3000/producto
+Content-Type: application/json
+
+{"nombre":"gabu3",
+"precio":1
+}
+
+###Mostrar producto
+GET http://127.0.0.1:3000/producto/80
+
+###Modificar producto
+PUT http://127.0.0.1:3000/producto/20 
+Content-Type: application/json
+
+{"nombre":"gabu2",
+"precio":1
+}
+
+###Borrar
+DELETE http://127.0.0.1:3000/producto/20
+
+
+###
+PUT http://127.0.0.1:3000/producto/monitor
+Content-Type: application/json
+
+{
+    "nombre":"monitor gamer",
+    "precio":300
+}
