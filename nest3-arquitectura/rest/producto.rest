@@ -6,9 +6,7 @@ GET http://127.0.0.1:3000/producto
 POST http://127.0.0.1:3000/producto
 Content-Type: application/json
 
-{"nombre":"gabu3",
-"precio":1
-}
+{ "nombre": "Procesador", "cantidad": 25, "precio": 500 }
 
 ###Mostrar producto
 GET http://127.0.0.1:3000/producto/80
@@ -22,11 +20,11 @@ Content-Type: application/json
 }
 
 ###Borrar
-DELETE http://127.0.0.1:3000/producto/20
+DELETE http://127.0.0.1:3000/producto/gabu3
 
 
 ###
-PUT http://127.0.0.1:3000/producto/monitor
+PUT http://127.0.0.1:3000/producto/gabu3
 Content-Type: application/json
 
 {

@@ -25,10 +25,17 @@ funmostar(@Param("id")id){
 }
 @Put(":id")
 funmodificar(@Param("id")id,@Body()prod)
-{return"modificando..."+id}
+{
+    let respuesta=this.productoService.update(id,prod);
+    return respuesta
+}
+
 @Delete(":id")
 funeliminar(@Param("id")id)
-{return"eliminado"+id }
+{
+    let respuesta=this.productoService.delete(id);
+    return respuesta
+    return"eliminado"+id }
 
 @Post()
 funguardar(@Body()prod)
