@@ -6,7 +6,7 @@ GET http://127.0.0.1:3000/producto
 POST http://127.0.0.1:3000/producto
 Content-Type: application/json
 
-{ "nombre": "Procesador", "cantidad": 25, "precio": 500 }
+{ "nombre": "Procesador", "cantidad": 25, "precio": 500, "imagen":"imagen.jpg" }
 
 ###Mostrar producto
 GET http://127.0.0.1:3000/producto/80

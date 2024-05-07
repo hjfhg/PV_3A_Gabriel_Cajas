@@ -14,4 +14,7 @@ export class producto{
     @Column()
     cantidad:number;
 
+    @Column()
+    imagen:string;
+
 }
