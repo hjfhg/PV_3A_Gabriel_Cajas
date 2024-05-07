@@ -1,6 +1,6 @@
 import {Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
-import { producto } from './entities/producto.entity';
+import { Producto } from './entities/producto.entity';
 import { Repository } from 'typeorm';
 
 
@@ -8,7 +8,7 @@ import { Repository } from 'typeorm';
 export class ProductoService {
     private productos: any[]=[];
 
-    constructor(@InjectRepository(producto)private readonly productoRepository: Repository<producto>){}
+    constructor(@InjectRepository(Producto)private readonly productoRepository: Repository<Producto>){}
     
     async findAll():Promise<any[]>{
         return await this.productoRepository.find();
@@ -18,12 +18,12 @@ export class ProductoService {
     async create (prod:any){
         // this.productos.push(prod);
         //producto1 esta cambiado porque el inge puso "Producto" con mayuscula
-        const producto1=new producto();
-        producto1.nombre=prod.nombre;
-        producto1.precio=prod.precio;
-        producto1.cantidad=prod.cantidad;
-        producto1.imagen=prod.imagen;    
-        return await this.productoRepository.save(producto1)
+        const producto=new Producto();
+        producto.nombre=prod.nombre;
+        producto.precio=prod.precio;
+        producto.cantidad=prod.cantidad;
+        producto.imagen=prod.imagen;    
+        return await this.productoRepository.save(producto)
         //return prod;
     }
     update(nombre:string,prod:any):any{
